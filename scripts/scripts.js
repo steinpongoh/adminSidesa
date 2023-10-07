@@ -13,3 +13,14 @@
         $("body").toggleClass("sb-sidenav-toggled");
     });
 })(jQuery);
+
+$(document).ready(function () {
+    $('#dataTable').DataTable();
+});
+
+$(document).ready(function () {
+    $('#kk').selectize({
+        sortField: 'text'
+    });
+});
+

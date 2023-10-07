@@ -1,22 +1,32 @@
 <?php
-include 'templates/header.php';
-include 'functions/functions.php';
+include '../templates/header.php';
+include '../functions/functions.php';
 
 
 $queryPenduduk = query("SELECT penduduk.id,keluarga.no_kk,nik,nama,tanggal_lahir,jenis_kelamin,agama,pekerjaan,alamat_lengkap FROM `penduduk` INNER JOIN keluarga ON penduduk.no_kk = keluarga.id");
-
 ?>
 <div id="layoutSidenav_content">
-    <div class="container-fluid">
-        <main>
+    <main>
+        <div class="container-fluid">
             <h1 class="mt-4">Data Penduduk</h1>
             <ol class="breadcrumb mb-4">
-                <li class="breadcrumb-item active">databases/dataPenduduk</li>
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Data Penduduk</li>
+                </ol>
             </ol>
             <div class="card mb-4">
                 <div class="card-header">
-                    <i class="fas fa-table mr-1"></i>
-                    Data Penduduk
+                    <div>
+                        <i class="fas fa-table mr-1 position-relative"></i>
+                        Data Penduduk
+                    </div>
+                    <a href="../models/tambahPenduduk.php">
+                        <button type="button" class="btn btn-secondary">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-square-plus mr-2"></i>Tambah</div>
+                        </button>
+                    </a>
+
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -48,10 +58,10 @@ $queryPenduduk = query("SELECT penduduk.id,keluarga.no_kk,nik,nama,tanggal_lahir
                                 </tr>
                             </tfoot>
                             <tbody>
-                                <?php $i = 1?>
+                                <?php $i = 1 ?>
                                 <?php foreach ($queryPenduduk as $rows) { ?>
                                     <tr>
-                                        <td><?= $i?></td>
+                                        <td><?= $i ?></td>
                                         <td><?php echo $rows["nik"] ?></td>
                                         <td><?php echo $rows["no_kk"] ?></td>
                                         <td><?php echo $rows["nama"] ?></td>
@@ -61,14 +71,15 @@ $queryPenduduk = query("SELECT penduduk.id,keluarga.no_kk,nik,nama,tanggal_lahir
                                         <td><?php echo $rows["pekerjaan"] ?></td>
                                         <td><?php echo $rows["alamat_lengkap"] ?></td>
                                     </tr>
-                                    <?= $i++?>
+                                    <?php $i++ ?>
                                 <?php } ?>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
 </div>
-    <?php include 'templates/footer.php'; ?>
+</div>
+<?php include '../templates/footer.php'; ?>
