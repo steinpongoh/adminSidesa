@@ -12,7 +12,7 @@
     <title>Admin SIDESA</title>
 </head>
 
-<body>
+<body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">SI Tondangow</a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
@@ -44,17 +44,17 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Core</div>
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="/adminSidesa/index.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            Dashboard
+                            Dashboard   
                         </a>
                         <div class="sb-sidenav-menu-heading">Databases</div>
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="/adminSidesa/dataPenduduk.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Data Penduduk
                         </a>
-                        <a class="nav-link" href="index.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        <a class="nav-link" href="/adminSidesa/dataKeluarga.php">
+                            <div class="sb-nav-link-icon"><i class="fas fa-house-chimney-window"></i></div>
                             Data Keluarga
                         </a>
                         <a class="nav-link" href="index.html">
