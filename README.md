@@ -1,5 +1,5 @@
 # adminwebdesa
-Versi 1.1
+Update 1.1
 
 #Sidebar
 - konfigurasi penargetan file dari button Dashboard, Data Penduduk dan Data Keluarga
@@ -12,6 +12,10 @@ Versi 1.1
 
 #CRUD Keluarga
 - pembuatan table keluarga
+
+Update 1.2
+#CRUD penduduk
+- setup form untuk tambah penduduk
 
 Fitur :
 - Dashboard
