@@ -14,13 +14,15 @@ $pageName = 'Dashboard';
     <div class="container-fluid">
         <h1 class="mt-4">Dashboard</h1>
         <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item active">core/dashboard</li>
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
         </ol>
         <div class="row">
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-primary text-white mb-4">
-                    <div class="card-body pb-2">Total Data Penduduk :</div>
-                    <div class="card-body font-weight-bold pt-0"><?php echo count($queryPenduduk) ?></div>
+                <div class="card-body pb-0 text-center">Total Data Keluarga :</div>
+                    <div class="card-body font-weight-bolder text-center pt-0 pb-1" style="font-size: 30px;"><?php echo count($queryPenduduk) ?></div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
                         <a class="small text-white stretched-link" href="/adminSidesa/dataPenduduk.php">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -29,8 +31,8 @@ $pageName = 'Dashboard';
             </div>
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-warning text-white mb-4">
-                    <div class="card-body pb-2">Total Data Keluarga :</div>
-                    <div class="card-body font-weight-bold pt-0"><?php echo count($queryKeluarga) ?></div>
+                    <div class="card-body pb-0 text-center">Total Data Keluarga :</div>
+                    <div class="card-body font-weight-bolder text-center pt-0 pb-1" style="font-size: 30px;"><?php echo count($queryKeluarga) ?></div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
                         <a class="small text-white stretched-link" href="/adminSidesa/dataKeluarga.php">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -39,8 +41,8 @@ $pageName = 'Dashboard';
             </div>
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-success text-white mb-4">
-                    <div class="card-body pb-2">Total Data Pria :</div>
-                    <div class="card-body font-weight-bold pt-0"><?php echo count($queryPria) ?></div>
+                <div class="card-body pb-0 text-center">Total Data Keluarga :</div>
+                    <div class="card-body font-weight-bolder text-center pt-0 pb-1" style="font-size: 30px;"><?php echo count($queryPria) ?></div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
                         <a class="small text-white stretched-link" href="#">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -49,8 +51,8 @@ $pageName = 'Dashboard';
             </div>
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-danger text-white mb-4">
-                    <div class="card-body pb-2">Total Data Wanita :</div>
-                    <div class="card-body font-weight-bold pt-0"><?php echo count($queryWanita) ?></div>
+                <div class="card-body pb-0 text-center">Total Data Keluarga :</div>
+                    <div class="card-body font-weight-bolder text-center pt-0 pb-1" style="font-size: 30px;"><?php echo count($queryWanita) ?></div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
                         <a class="small text-white stretched-link" href="#">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>

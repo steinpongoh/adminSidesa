@@ -1,9 +1,9 @@
 <?php
-include 'templates/header.php';
-include 'functions/functions.php';
+include '../templates/header.php';
+include '../functions/functions.php';
 
 
-$queryPenduduk = query("SELECT * FROM keluarga");
+$queryKeluarga = query("SELECT * FROM keluarga");
 
 ?>
 <div id="layoutSidenav_content">
@@ -11,7 +11,10 @@ $queryPenduduk = query("SELECT * FROM keluarga");
         <main>
             <h1 class="mt-4">Data Keluarga</h1>
             <ol class="breadcrumb mb-4">
-                <li class="breadcrumb-item active">databases/dataKeluarga</li>
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Data Keluarga</li>
+                </ol>
             </ol>
             <div class="card mb-4">
                 <div class="card-header">
@@ -39,7 +42,7 @@ $queryPenduduk = query("SELECT * FROM keluarga");
                             </tfoot>
                             <tbody>
                                 <?php $i = 1?>
-                                <?php foreach ($queryPenduduk as $rows) { ?>
+                                <?php foreach ($queryKeluarga as $rows) { ?>
                                     <tr>
                                         <td><?= $i?></td>
                                         <td><?php echo $rows['no_kk']?></td>
@@ -56,4 +59,4 @@ $queryPenduduk = query("SELECT * FROM keluarga");
         </main>
     </div>
 </div>
-<?php include 'templates/footer.php'; ?>
+<?php include '../templates/footer.php'; ?>
