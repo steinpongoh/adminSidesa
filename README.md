@@ -1,4 +1,10 @@
 # adminwebdesa
+Update 1.2
+
+#CRUD penduduk
+- setup form untuk tambah penduduk
+
+
 Update 1.1
 
 #Sidebar
@@ -13,12 +19,6 @@ Update 1.1
 #CRUD Keluarga
 - pembuatan table keluarga
 
-
-
-Update 1.2
-
-#CRUD penduduk
-- setup form untuk tambah penduduk
 
 Fitur :
 - Dashboard
