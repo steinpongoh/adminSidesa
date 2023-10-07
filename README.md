@@ -1,6 +1,6 @@
 # adminwebdesa
 Fitur :
-- Dashboard (sementara)
+- Dashboard
 - CRUD penduduk
 - CRUD berita
 - CRUD keluarga
