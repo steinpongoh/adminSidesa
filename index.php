@@ -1,5 +1,5 @@
 <?php
-include 'functions/functions.php';
+include 'functions/general.php';
 include 'templates/header.php';
 
 $pageName = 'Dashboard';
