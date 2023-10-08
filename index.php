@@ -2,6 +2,8 @@
 include 'functions/functions.php';
 include 'templates/header.php';
 
+$pageName = 'Dashboard';
+
 $queryPenduduk = query("SELECT * FROM penduduk");
 $queryKeluarga = query("SELECT * FROM keluarga");
 $queryPria = query("SELECT * FROM penduduk WHERE jenis_kelamin = 'Pria'");
@@ -12,10 +14,10 @@ $pageName = 'Dashboard';
 
 <div id="layoutSidenav_content">
     <div class="container-fluid">
-        <h1 class="mt-4">Dashboard</h1>
+        <h1 class="mt-4"><?= $pageName?></h1>
         <ol class="breadcrumb mb-4">
             <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item active">Dashboard</li>
+                <li class="breadcrumb-item active"><?= $pageName?></li>
             </ol>
         </ol>
         <div class="row">

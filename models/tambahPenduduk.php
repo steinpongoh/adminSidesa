@@ -1,6 +1,9 @@
 <?php
 include '../templates/header.php';
-include '../functions/functions.php';
+include '../functions/penduduk.php';
+
+$pageName='Tambah Penduduk';
+
 
 if(isset($_POST['submit'])){
     if(tambahPenduduk($_POST)>0){
@@ -22,19 +25,19 @@ if(isset($_POST['submit'])){
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid">
-            <h1 class="mt-4">Tambah Penduduk</h1>
+            <h1 class="mt-4"><?= $pageName?></h1>
             <ol class="breadcrumb mb-4">
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
                     <li class="breadcrumb-item"><a href="../controllers/dataPenduduk.php">Data Penduduk</a></li>
-                    <li class="breadcrumb-item active">Tambah Penduduk</li>
+                    <li class="breadcrumb-item active"><?= $pageName?></li>
                 </ol>
             </ol>
             <div class="card mb-4">
                 <div class="card-header">
                     <div>
                         <i class="fas fa-table mr-1 position-relative"></i>
-                        Form Tambah Penduduk
+                        Form <?= $pageName?>
                     </div>
                 </div>
                 <div class="card-body">
@@ -62,7 +65,7 @@ if(isset($_POST['submit'])){
                         <div class="form-group flex-column" style="display: flex;">
                             <label for="jenis_kelamin">Jenis Kelamin</label>
                             <select name="jenis_kelamin" style="padding:5px; height: 38px; border-radius: 4px; border-color:rgb(204, 204, 204); outline:none;" id="jenis_kelamin" class="form-select" required>
-                                <option selected></option>
+                                <option selected disabled hidden></option>
                                 <option value="Pria">Pria</option>
                                 <option value="Wanita">Wanita</option>
                             </select>
