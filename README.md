@@ -1,28 +1,13 @@
 # adminwebdesa
-Update 1.2
-- setup form untuk tambah penduduk
-
-
-Update 1.1
-
-#Sidebar
-- konfigurasi penargetan file dari button Dashboard, Data Penduduk dan Data Keluarga
-
-#Dashboard
-- konfigurasi statistik (total keluarga, penduduk, wanita dan pria)
-
-#CRUD Penduduk
-- pembuatan table penduduk
-
-#CRUD Keluarga
-- pembuatan table keluarga
-
+Latest Update 1.3
+- CRUD Data Penduduk
+- CRUD Data Keluarga
 
 Fitur :
 - Dashboard
-- CRUD penduduk
+- CRUD penduduk (Done)
 - CRUD berita
-- CRUD keluarga
+- CRUD keluarga (Done)
 - CRUD pengumuman
 - CRUD event
 - CRUD Galeri
