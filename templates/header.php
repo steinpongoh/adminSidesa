@@ -59,7 +59,7 @@
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-photo-film"></i></div>
                             Data Galeri
                         </a>
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="/adminSidesa/controllers/dataPengaduan.php">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-flag"></i></div>
                             Data Pengaduan
                         </a>
@@ -71,7 +71,7 @@
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-bullhorn"></i></div>
                             Data Pengumuman
                         </a>
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="/adminSidesa/controllers/dataEvent.php">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-calendar-days"></i></div>
                             Data Event
                         </a>
