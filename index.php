@@ -23,7 +23,7 @@ $pageName = 'Dashboard';
         <div class="row">
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-primary text-white mb-4">
-                <div class="card-body pb-0 text-center">Total Data Keluarga :</div>
+                <div class="card-body pb-0 text-center">Total Data Penduduk :</div>
                     <div class="card-body font-weight-bolder text-center pt-0 pb-1" style="font-size: 30px;"><?php echo count($queryPenduduk) ?></div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
                         <a class="small text-white stretched-link" href="/adminSidesa/dataPenduduk.php">View Details</a>
@@ -43,20 +43,20 @@ $pageName = 'Dashboard';
             </div>
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-success text-white mb-4">
-                <div class="card-body pb-0 text-center">Total Data Keluarga :</div>
+                <div class="card-body pb-0 text-center">Total Data Pria :</div>
                     <div class="card-body font-weight-bolder text-center pt-0 pb-1" style="font-size: 30px;"><?php echo count($queryPria) ?></div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="#">View Details</a>
+                        <a class="small text-white stretched-link" href="/adminSidesa/dataPenduduk.php">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-danger text-white mb-4">
-                <div class="card-body pb-0 text-center">Total Data Keluarga :</div>
+                <div class="card-body pb-0 text-center">Total Data Wanita :</div>
                     <div class="card-body font-weight-bolder text-center pt-0 pb-1" style="font-size: 30px;"><?php echo count($queryWanita) ?></div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="#">View Details</a>
+                        <a class="small text-white stretched-link" href="/adminSidesa/dataPenduduk.php">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>

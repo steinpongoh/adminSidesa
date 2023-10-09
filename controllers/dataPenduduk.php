@@ -20,7 +20,7 @@ $queryPenduduk = query("SELECT penduduk.id,keluarga.no_kk,nik,nama,tanggal_lahir
                 <div class="card-header">
                     <div>
                         <i class="fas fa-table mr-1 position-relative"></i>
-                        Data Penduduk
+                        <?= $pageName?>
                     </div>
                     <a href="../models/tambahPenduduk.php">
                         <button type="button" class="btn btn-success">
