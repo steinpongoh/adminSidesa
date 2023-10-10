@@ -4,7 +4,7 @@ include 'general.php';
 function ubahPengaduan($data, $file)
 {
     global $dbconnect;
-    $direktori = "/sidesa/img/pengduan/";
+    $direktori = "/sidesa/img/pengaduan/";
     $id = $data['id'];
     $oldFile = $data['oldFile'];
     $nama_pengadu = $data['nama_pengadu'];
