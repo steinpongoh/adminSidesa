@@ -7,12 +7,12 @@ Update 1.4
 Info Lebih Lanjut liat di tab Pull-Requests/Closed
 
 Fitur :
-- Dashboard
+- Dashboard (Sementara)
 - CRUD penduduk (Done)
-- CRUD berita
+- CRUD berita 
 - CRUD keluarga (Done)
 - CRUD pengumuman
 - CRUD event (Done)
-- CRUD Galeri
-- CRUD UMKM
+- CRUD Galeri (Done)
+- CRUD UMKM (Done)
 - CRUD Pengaduan (Done)
