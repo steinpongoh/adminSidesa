@@ -32,7 +32,7 @@
             </li>
         </ul>
     </nav>
-    <div id="layoutSidenav">
+    <div id="layoutSidenav" ">
         <div id="layoutSidenav_nav">
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
@@ -43,18 +43,32 @@
                             Dashboard
                         </a>
                         <div class="sb-sidenav-menu-heading">Databases</div>
-                        <a class="nav-link" href="/adminSidesa/controllers/dataPenduduk.php">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-person"></i></div>
-                            Data Penduduk
+                            Data Warga
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <a class="nav-link" href="/adminSidesa/controllers/dataKeluarga.php">
-                            <div class="sb-nav-link-icon"><i class="fa-solid fa-people-roof"></i></div>
-                            Data Keluarga
-                        </a>
-                        <a class="nav-link" href="index.html">
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="/adminSidesa/controllers/dataPenduduk.php">
+                                    Data Penduduk
+                                </a>
+                                <a class="nav-link" href="/adminSidesa/controllers/dataKeluarga.php">
+                                    Data Keluarga
+                                </a>
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-shop"></i></div>
                             Data UMKM
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="/adminSidesa/controllers/dataPenjual.php">Data Penjual</a>
+                                <a class="nav-link" href="/adminSidesa/controllers/dataProduk.php">Data Produk</a>
+                            </nav>
+                        </div>
                         <a class="nav-link" href="/adminSidesa/controllers/dataGaleri.php">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-photo-film"></i></div>
                             Data Galeri
@@ -63,11 +77,11 @@
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-flag"></i></div>
                             Data Pengaduan
                         </a>
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="/adminSidesa/controllers/dataBerita.php">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-newspaper"></i></div>
                             Data Berita
                         </a>
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="/adminSidesa/controllers/dataPengumuman.php">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-bullhorn"></i></div>
                             Data Pengumuman
                         </a>

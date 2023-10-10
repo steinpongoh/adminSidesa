@@ -5,7 +5,7 @@ include '../functions/penduduk.php';
 $pageName = 'Ubah Penduduk';
 
 $getId = $_GET['id'];
-$queryNoKKPenduduk=query("SELECT penduduk.no_kk FROM penduduk INNER JOIN keluarga ON penduduk.no_kk=keluarga.id WHERE penduduk.id='$getId'")[0];
+$queryNoIDPenduduk=query("SELECT penduduk.no_kk FROM penduduk INNER JOIN keluarga ON penduduk.no_kk=keluarga.id WHERE penduduk.id='$getId'")[0];
 $querySelectedData=query("SELECT keluarga.nama_kepala_keluarga, penduduk.id, keluarga.no_kk, penduduk.no_kk, nik, nama, tanggal_lahir, jenis_kelamin, agama, pekerjaan, alamat_lengkap FROM penduduk INNER JOIN keluarga ON penduduk.no_kk=keluarga.id WHERE penduduk.id='$getId'")[0];
 if (isset($_POST['submit'])) {
     if (ubahPenduduk($_POST) > 0) {
@@ -56,8 +56,8 @@ if (isset($_POST['submit'])) {
                         </div>
                         <div class="form-group">
                             <label for="kk">Kartu Keluarga</label>
-                            <select name="kk" id="kk" class="form-select" required>
-                                <option value="<?= $queryNoKKPenduduk['no_kk']?>" selected hidden></option>
+                            <select name="kk" id="selectize" class="form-select" required>
+                                <option value="<?= $queryNoIDPenduduk['no_kk']?>" selected hidden></option>
                                 <?php
                                 $query = mysqli_query($dbconnect, "SELECT * FROM keluarga") or die(mysqli_error($dbconnect));
                                 while ($data = mysqli_fetch_array($query)) {

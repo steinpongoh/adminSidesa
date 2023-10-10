@@ -52,7 +52,7 @@ if(isset($_POST['submit'])){
                         </div>
                         <div class="form-group">
                             <label for="kk">Kartu Keluarga</label>
-                            <select name="kk" id="kk" class="form-select" required>
+                            <select name="kk" id="selectize" class="form-select" required>
                                 <option selected></option>
                                 <?php
                                 $query = mysqli_query($dbconnect, "SELECT * FROM keluarga") or die(mysqli_error($koneksi));
