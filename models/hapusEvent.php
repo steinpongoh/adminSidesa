@@ -12,3 +12,4 @@ if(hapusData($id,'event')>0){
         document.location.href='../controllers/dataEvent.php'
         </script>";
 };
+?>

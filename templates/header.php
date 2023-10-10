@@ -55,7 +55,7 @@
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-shop"></i></div>
                             Data UMKM
                         </a>
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="/adminSidesa/controllers/dataGaleri.php">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-photo-film"></i></div>
                             Data Galeri
                         </a>

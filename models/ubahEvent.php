@@ -6,15 +6,15 @@ $pageName = 'Ubah Event';
 $getId = $_GET['id'];
 $queryEvent = query("SELECT * FROM `event` WHERE id='$getId'")[0];
 
-if(isset($_POST['submit'])){
-    if(ubahEvent($_POST)>0){
+if (isset($_POST['submit'])) {
+    if (ubahEvent($_POST) > 0) {
         echo "
             <script>
             alert('Data Berhasil Diubah');
             document.location.href='../controllers/dataEvent.php';
             </script> 
         ";
-    }else{
+    } else {
         echo "
             <script>
             alert('Data Gagal Diubah');
@@ -44,22 +44,22 @@ if(isset($_POST['submit'])){
                 </div>
                 <div class="card-body">
                     <form name="form" id="form" action="#" method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="id" id="id" value="<?= $queryEvent['id']?>">
+                        <input type="hidden" name="id" id="id" value="<?= $queryEvent['id'] ?>">
                         <div class="form-group">
                             <label for="judul_acara">Judul Acara</label>
-                            <input name="judul_acara" id="judul_acara" value="<?= $queryEvent['judul_acara']?>" autocomplete="off" type="text" class="form-control" placeholder="..." required>
+                            <input name="judul_acara" id="judul_acara" value="<?= $queryEvent['judul_acara'] ?>" autocomplete="off" type="text" class="form-control" placeholder="..." required>
                         </div>
                         <div class="form-group">
                             <label for="detail_acara">Detail Acara</label>
-                            <textarea cols="4" rows="4" form="form" name="detail_acara" id="detail_acara" autocomplete="off" type="text" class="form-control" placeholder required><?= $queryEvent['detail_acara']?></textarea>
+                            <textarea cols="4" rows="4" form="form" name="detail_acara" id="detail_acara" autocomplete="off" type="text" class="form-control" placeholder required><?= $queryEvent['detail_acara'] ?></textarea>
                         </div>
                         <div class="form-group">
                             <label for="lokasi">Lokasi</label>
-                            <input name="lokasi" id="lokasi" value="<?= $queryEvent['lokasi']?>" autocomplete="off" type="text" class="form-control" placeholder="..." required>
+                            <input name="lokasi" id="lokasi" value="<?= $queryEvent['lokasi'] ?>" autocomplete="off" type="text" class="form-control" placeholder="..." required>
                         </div>
                         <div class="form-group">
                             <label for="tanggal_acara">Tanggal Acara</label>
-                            <input name="tanggal_acara" id="tanggal_acara" value="<?= $queryEvent['tanggal_acara']?>" autocomplete="off" type="date" class="form-control" placeholder="..." required>
+                            <input name="tanggal_acara" id="tanggal_acara" value="<?= $queryEvent['tanggal_acara'] ?>" autocomplete="off" type="date" class="form-control" placeholder="..." required>
                         </div>
                         <button name="submit" id="submit" type="submit" class="btn btn-primary">Submit</button>
                     </form>

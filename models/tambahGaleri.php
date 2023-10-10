@@ -1,18 +1,16 @@
 <?php
-require '../functions/event.php';
+require '../functions/galeri.php';
 include '../templates/header.php';
 
-$pageName='Tambah Event';
+$pageName = 'Tambah Galeri';
 if (isset($_POST['submit'])) {
-    if (tambahEvent($_POST) > 0) {
+    if (tambahGaleri($_POST, $_FILES) > 0) {
         echo "<script>
             alert('Data Berhasil Ditambah')
-            document.location.href='../controllers/dataEvent.php'
         </script>";
     } else {
         echo "<script>
-            alert('Data Berhasil Ditambah')
-            document.location.href='../controllers/dataEvent.php'
+            alert('Data Gagal Ditambah')
         </script>";
     }
 }
@@ -25,7 +23,7 @@ if (isset($_POST['submit'])) {
             <ol class="breadcrumb mb-4">
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a href="../index.php">Dashboard</a></li>
-                    <li class="breadcrumb-item"><a href="../controllers/dataEvent.php">Data Galeri</a></li>
+                    <li class="breadcrumb-item"><a href="../controllers/dataGaleri.php">Data Galeri</a></li>
                     <li class="breadcrumb-item active"><?= $pageName ?></li>
                 </ol>
             </ol>
@@ -39,20 +37,16 @@ if (isset($_POST['submit'])) {
                 <div class="card-body">
                     <form name="form" id="form" action="#" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="judul_acara">Foto</label>
-                            <input name="judul_acara" id="judul_acara" autocomplete="off" type="text" class="form-control" placeholder="..." required>
+                            <label for="caption">Caption</label>
+                            <input name="caption" id="caption" autocomplete="off" type="text" class="form-control" placeholder="..." required>
                         </div>
                         <div class="form-group">
-                            <label for="detail_acara">Detail Acara</label>
-                            <textarea cols="4" rows="4" form="form" name="detail_acara" id="detail_acara" autocomplete="off" type="text" class="form-control" placeholder required></textarea>
+                            <label for="tanggal_upload">Tanggal</label>
+                            <input name="tanggal_upload" id="tanggal_upload" autocomplete="off" type="datetime-local" class="form-control" placeholder="..." required>
                         </div>
-                        <div class="form-group">
-                            <label for="lokasi">Lokasi</label>
-                            <input name="lokasi" id="lokasi" autocomplete="off" type="text" class="form-control" placeholder="..." required>
-                        </div>
-                        <div class="form-group">
-                            <label for="tanggal_acara">Tanggal Acara</label>
-                            <input name="tanggal_acara" id="tanggal_acara" autocomplete="off" type="date" class="form-control" placeholder="..." required>
+                        <div class="mb-3">
+                            <label for="namaFile" class="form-label">Foto</label>
+                            <input id="namaFile" name="namaFile" class="form-control" type="file">
                         </div>
                         <button name="submit" id="submit" type="submit" class="btn btn-primary">Submit</button>
                     </form>
@@ -63,4 +57,5 @@ if (isset($_POST['submit'])) {
 </div>
 </div>
 
-<?php include '../templates/footer.php'; ?>
+
+<?php include '../templates/footer.php' ?>
