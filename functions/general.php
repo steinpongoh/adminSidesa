@@ -17,3 +17,5 @@ function hapusData($id,$target)
     global $dbconnect;
     mysqli_query($dbconnect, "DELETE FROM `$target` WHERE id=$id");
 }
+?>
+

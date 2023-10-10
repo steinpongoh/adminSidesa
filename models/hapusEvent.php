@@ -1,5 +1,5 @@
 <?php
-require '../functions/keluarga.php';
+require '../functions/event.php';
 $id=$_GET['id'];
 
 if(hapusData($id,'event')>0){
