@@ -36,6 +36,7 @@ $queryGaleri = query('SELECT * FROM galeri');
                             <thead>
                                 <tr>
                                     <th>No</th>
+                                    <th>Caption</th>
                                     <th>Gambar</th>
                                     <th>Tanggal Upload</th>
                                     <th></th>
@@ -44,6 +45,7 @@ $queryGaleri = query('SELECT * FROM galeri');
                             <tfoot>
                             <tr>
                                     <th>No</th>
+                                    <th>Caption</th>
                                     <th>Gambar</th>
                                     <th>Tanggal Upload</th>
                                     <th></th>
@@ -54,6 +56,7 @@ $queryGaleri = query('SELECT * FROM galeri');
                                 <?php foreach ($queryGaleri as $rows) { ?>
                                     <tr>
                                         <td><?= $i ?></td>
+                                        <td><?php echo $rows['caption']?></td>
                                         <td>
                                             <img width="60px" height="60px" src="/sidesa/img/galeri/<?php echo $rows['gambar']?>" alt="">
                                         </td>
