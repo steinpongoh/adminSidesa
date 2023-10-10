@@ -1,8 +1,7 @@
 # adminwebdesa
-Update 1.4
+Update 1.6
 
-- CRUD Pengaduan
-- CRUD Event
+- CRUD UMKM
   
 Info Lebih Lanjut liat di tab Pull-Requests/Closed
 
