@@ -11,6 +11,9 @@ Fixes 1.7.2
 - Error handling, menambah error handling di hapus keluarga dan hapus penjual
 - Jumlah anggota keluarga, hapus inputan jumlah anggota keluarga, data jumlah anggota keluarga di tabel diganti menjadi jumlah penduduk berdasarkan id keluarga
 - sql, menghapus atribut jumlah_anggota_penduduk dari database
+
+Fixes 1.7.3
+- Format tanggal, mengubah format tanggal di setiap tabel yang menggunakan atribut tanggal
   
 Info Lebih Lanjut liat di tab Pull-Requests/Closed
 
