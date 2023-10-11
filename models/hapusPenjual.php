@@ -2,14 +2,15 @@
 require '../functions/umkm.php';
 $id=$_GET['id'];
 
-if(hapusPenjual($id,'penjual')>0){
-    echo"<script>
-        alert('Data Gagal Dihapus');
-        document.location.href='../controllers/dataPenjual.php'
-        </script>";
-}else{
-    echo"<script>
-        document.location.href='../controllers/dataPenjual.php'
-        </script>";
-};
+
+try{
+    if(hapusPenjual($id,'penjual')){
+        echo"<script>
+            document.location.href='../controllers/dataPenjual.php'
+            </script>";
+    }
+} catch(Throwable $e){
+    echo '<script>alert("Gagal Hapus : Pastikan Data Penjual Sudah Tidak Memiliki Data Produk")
+    document.location.href="../controllers/dataPenjual.php"</script>';
+}
 ?>
