@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 11, 2023 at 09:00 AM
+-- Generation Time: Oct 11, 2023 at 03:58 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -43,7 +43,6 @@ CREATE TABLE `berita` (
   `id` int(11) NOT NULL,
   `judul_berita` varchar(255) NOT NULL,
   `tanggal_berita` date NOT NULL,
-  `tanggal_upload` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `detail_berita` text NOT NULL,
   `gambar` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -52,8 +51,9 @@ CREATE TABLE `berita` (
 -- Dumping data for table `berita`
 --
 
-INSERT INTO `berita` (`id`, `judul_berita`, `tanggal_berita`, `tanggal_upload`, `detail_berita`, `gambar`) VALUES
-(1, 'bakalae cok', '2023-10-19', '2023-10-11 05:38:00', 'adoh di lingkungan 2 ada dbkalae, dtang lia akng dlu pala', 'Screenshot 2023-06-28 141847.png');
+INSERT INTO `berita` (`id`, `judul_berita`, `tanggal_berita`, `detail_berita`, `gambar`) VALUES
+(3, 'Bakalae', '2023-10-11', 'adoh pala dtng lia dlu kmri ksiang dimuka balai, so ba tempur drng ini, so sirang dng aer mr dng aer joh tako mo se pisah, telpon jo sana polisi pala', 'dff94199afafbae08e92a51261c6f4bf.jpeg'),
+(4, 'ald;sjf;hajkdshfalsjdfkahjsdf', '2023-10-11', 'orjlqdhlkja dhsfk ahdkfj ahdskfhl akjdshfkjadshfkjadslhkfadfs', '193735.png');
 
 -- --------------------------------------------------------
 
@@ -66,16 +66,16 @@ CREATE TABLE `event` (
   `judul_acara` varchar(255) NOT NULL,
   `detail_acara` text NOT NULL,
   `lokasi` varchar(255) NOT NULL,
-  `tanggal_acara` date NOT NULL
+  `tanggal_acara` date NOT NULL,
+  `gambar` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `event`
 --
 
-INSERT INTO `event` (`id`, `judul_acara`, `detail_acara`, `lokasi`, `tanggal_acara`) VALUES
-(2, 'Perayaan Natal', 'Perayaan Natal di Tahun ini akan sangat meriah', 'Tondangow', '2023-12-25'),
-(4, 'Wisata', 'Mo pi pante ges dalam rangka libur', 'Pantai Paal', '2023-10-26');
+INSERT INTO `event` (`id`, `judul_acara`, `detail_acara`, `lokasi`, `tanggal_acara`, `gambar`) VALUES
+(5, 'Pala pe kaweng ', 'marjo pala dba undang 1 lingkungan dtang makang makang', 'tondangow, kompleks kapling', '2023-10-11', 'Acer_Wallpaper_02_5000x2813.jpg');
 
 -- --------------------------------------------------------
 
@@ -190,8 +190,16 @@ CREATE TABLE `pengumuman` (
   `id` int(11) NOT NULL,
   `judul_pengumuman` varchar(255) NOT NULL,
   `detail_pengumuman` text NOT NULL,
-  `tanggal_upload` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `tanggal_pengumuman` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pengumuman`
+--
+
+INSERT INTO `pengumuman` (`id`, `judul_pengumuman`, `detail_pengumuman`, `tanggal_pengumuman`) VALUES
+(3, 'sosialisasi', 'akls;dfjalksvklnvalnv', '2023-10-20 05:13:00'),
+(4, 'dsafgjhgfhdgfsadsA', 'ADFSGHFDGFSDASadfsgfhgjkhfdgfsadsDSFGHJDGFSDASADSFGDHFGJDFSDASDFGDHFJGHJFDGFSDAS', '2023-10-11 21:41:00');
 
 -- --------------------------------------------------------
 
@@ -234,7 +242,8 @@ CREATE TABLE `produk` (
 
 INSERT INTO `produk` (`id_produk`, `id_penjual`, `nama_produk`, `harga`, `gambar`) VALUES
 (3, 3, 'Gado Gado', '20,000', 'Screenshot 2023-09-07 115824.png'),
-(4, 5, 'Ramen', '20,000', 'Screenshot 2023-09-19 154759.png');
+(4, 5, 'Ramen', '20,000', 'Screenshot 2023-09-19 154759.png'),
+(6, 5, 'Sayor Nangka', '15,000', 'Acer_Wallpaper_02_5000x2813.jpg');
 
 --
 -- Indexes for dumped tables
@@ -317,13 +326,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `berita`
 --
 ALTER TABLE `berita`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `galeri`
@@ -353,7 +362,7 @@ ALTER TABLE `pengaduan`
 -- AUTO_INCREMENT for table `pengumuman`
 --
 ALTER TABLE `pengumuman`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `penjual`
@@ -365,7 +374,7 @@ ALTER TABLE `penjual`
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables

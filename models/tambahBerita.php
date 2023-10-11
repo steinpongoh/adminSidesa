@@ -1,6 +1,6 @@
 <?php
 require '../functions/berita.php';
-// include '../templates/header.php';
+include '../templates/header.php';
 
 $pageName = 'Tambah Berita';
 if (isset($_POST['submit'])) {
@@ -42,11 +42,7 @@ if (isset($_POST['submit'])) {
                         </div>
                         <div class="form-group">
                             <label for="tanggal_berita">Tanggal Berita</label>
-                            <input name="tanggal_berita" id="tanggal_berita" autocomplete="off" type="date" class="form-control" placeholder="..." required>
-                        </div>
-                        <div class="form-group">
-                            <label for="tanggal_upload">Tanggal Upload</label>
-                            <input name="tanggal_upload" id="tanggal_upload" autocomplete="off" type="datetime-local" class="form-control" placeholder="..." required>
+                            <input name="tanggal_berita" id="tanggal_berita" autocomplete="off" type="datetime-local" class="form-control" placeholder="..." required>
                         </div>
                         <div class="form-group">
                             <label for="detail_berita">Detail Berita</label>
