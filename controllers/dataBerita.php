@@ -58,7 +58,7 @@ $queryBerita = query('SELECT * FROM berita');
                                     <tr>
                                         <td><?= $i ?></td>
                                         <td><?php echo $rows['judul_berita'] ?></td>
-                                        <td><?php echo $rows['tanggal_berita'] ?></td>
+                                        <td><?php echo date('d M Y', strtotime($rows['tanggal_berita']))?></td>
                                         <td style="color:grey;"><?php echo substr($rows['detail_berita'],0,15) ?></td>
                                         <td>
                                             <img width="60px" height="60px" src="/sidesa/img/galeri/<?php echo $rows['gambar']?>" alt="">

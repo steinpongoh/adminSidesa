@@ -58,7 +58,7 @@ $queryPengumuman = query('SELECT * FROM pengumuman');
                                         <td><?= $i ?></td>
                                         <td><?php echo $rows['judul_pengumuman'] ?></td>
                                         <td><?php echo $rows['detail_pengumuman'] ?></td>
-                                        <td><?php echo $rows['tanggal_pengumuman'] ?></td>
+                                        <td><?php echo date('d M Y H:i', strtotime($rows['tanggal_pengumuman']))?></td>
                                         <td class="flex-row pr-2 align-items-center justify-content-center" style="display: flex;">
                                             <a href="../models/hapusPengumuman.php?id=<?= $rows['id']; ?>">
                                                 <button type="button" class="btn btn-danger">
