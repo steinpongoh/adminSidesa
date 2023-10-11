@@ -63,7 +63,7 @@ $queryPengaduan = query('SELECT * FROM `event`');
                                         <td><?php echo $rows['judul_acara'] ?></td>
                                         <td style="color:grey;"><?php echo substr($rows['detail_acara'], 0, 15)?>.....</td>
                                         <td><?php echo $rows['lokasi'] ?></td>
-                                        <td><?php echo $rows['tanggal_acara'] ?></td>
+                                        <td><?php echo date('d M Y', strtotime($rows['tanggal_acara']))?></td>
                                         <td>
                                             <img width="60px" height="60px" src="/sidesa/img/event/<?php echo $rows['gambar']?>" alt="">
                                         </td>

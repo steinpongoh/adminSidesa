@@ -60,7 +60,7 @@ $queryGaleri = query('SELECT * FROM galeri');
                                         <td>
                                             <img width="60px" height="60px" src="/sidesa/img/galeri/<?php echo $rows['gambar']?>" alt="">
                                         </td>
-                                        <td><?php echo $rows['tanggal_upload']?></td>
+                                        <td><?php echo date('d M Y H:i', strtotime($rows['tanggal_upload']))?></td>
                                         <td class="flex-row pr-2 align-items-center justify-content-center" style="display: flex;">
                                             <a href="../models/hapusGaleri.php?id=<?= $rows['id']; ?>">
                                                 <button type="button" class="btn btn-danger">
