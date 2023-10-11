@@ -62,7 +62,7 @@ $queryPengaduan = query('SELECT * FROM pengaduan');
                                         <td><?php echo $rows['alamat_lengkap'] ?></td>
                                         <td><?php echo $rows['judul_pengaduan'] ?></td>
                                         <td style="color:grey;"><?php echo substr($rows['detail_pengaduan'],0,15) ?>......</td>
-                                        <td><?php echo $rows['tanggal_pengaduan'] ?></td>
+                                        <td><?php echo date('d M Y H:i', strtotime($rows['tanggal_pengaduan']))?></td>
                                         <td><?php echo $rows['no_telepon'] ?></td>
                                         <td>
                                             <img width="60px" height="60px" src="/sidesa/img/pengaduan/<?php echo $rows['gambar']?>" alt="">
