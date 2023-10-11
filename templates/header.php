@@ -5,6 +5,7 @@
     <link href="/adminSidesa/styles/styles.css" rel="stylesheet" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/adminSidesa/assets/village.png" type="image/x-icon">
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" type="text/css" />
     <script src="https://kit.fontawesome.com/5af47de50f.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
@@ -15,7 +16,8 @@
     <title>Admin SIDESA</title>
 </head>
 
-<body class="sb-nav-fixed">
+
+<body class="sb-nav-fixed" style="background-color: rgb(245, 245, 245);">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">SI Tondangow</a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
@@ -32,9 +34,9 @@
             </li>
         </ul>
     </nav>
-    <div id="layoutSidenav" ">
+    <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
-            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+            <nav class="sb-sidenav accordion sb-sidenav-dark " id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Core</div>
