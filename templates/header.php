@@ -41,7 +41,7 @@ if($role !=='1'){
             </li>
         </ul>
     </nav>
-    <div id="layoutSidenav" ">
+    <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
