@@ -3,15 +3,14 @@
 
     function tambahBerita($data, $file){
         global $dbconnect;
-        $direktori="../../sidesa/img/berita/";
+        $direktori="../../sidesa/img/galeri/";
         $judul_berita=$data['judul_berita'];
         $tanggal_berita=$data['tanggal_berita'];
-        $tanggal_upload=$data['tanggal_upload'];
         $detail_berita=$data['detail_berita'];
 
         $foto=$file['namaFile']['name'];
         move_uploaded_file($file['namaFile']['tmp_name'],$direktori.$foto);
-        $query="INSERT INTO berita VALUES('','$judul_berita','$tanggal_berita','$tanggal_upload','$detail_berita','$foto')";
+        $query="INSERT INTO berita VALUES('','$judul_berita','$tanggal_berita','$detail_berita','$foto')";
         mysqli_query($dbconnect,$query);
         return mysqli_affected_rows($dbconnect);
     }   
@@ -20,10 +19,9 @@
         global $dbconnect;
         $id=$data['id'];
         $oldFile=$data['oldFile'];
-        $direktori="../../sidesa/img/berita/";
+        $direktori="../../sidesa/img/galeri/";
         $judul_berita=$data['judul_berita'];
         $tanggal_berita=$data['tanggal_berita'];
-        $tanggal_upload=$data['tanggal_upload'];
         $detail_berita=$data['detail_berita'];
         $checkFile=$file['namaFile']['name'];
 
@@ -34,7 +32,7 @@
             $foto=$oldFile;
         }
 
-        $query="UPDATE berita SET judul_berita='$judul_berita', tanggal_berita='$tanggal_berita', tanggal_upload='$tanggal_upload',
+        $query="UPDATE berita SET judul_berita='$judul_berita', tanggal_berita='$tanggal_berita',
         detail_berita='$detail_berita', gambar='$foto' WHERE id='$id'";
         
         mysqli_query($dbconnect,$query);

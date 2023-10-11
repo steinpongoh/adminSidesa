@@ -55,10 +55,6 @@ if (isset($_POST['submit'])) {
                             <input value="<?= $queryBerita['tanggal_berita'] ?>" name="tanggal_berita" id="tanggal_berita" autocomplete="off" type="date" class="form-control" placeholder="..." required>
                         </div>
                         <div class="form-group">
-                            <label for="tanggal_upload">Tanggal dan Waktu</label>
-                            <input value="<?= $queryBerita['tanggal_upload'] ?>" name="tanggal_upload" id="tanggal_upload" autocomplete="off" type="datetime-local" class="form-control" placeholder="..." required>
-                        </div>
-                        <div class="form-group">
                             <label for="detail_berita">Detail Berita</label>
                             <textarea cols="4" rows="4" form="form" name="detail_berita" id="detail_berita" autocomplete="off" type="text" class="form-control" placeholder="Tambahkan detail..." required><?= $queryBerita['detail_berita'] ?></textarea>
                         </div>
