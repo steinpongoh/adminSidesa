@@ -1,17 +1,16 @@
 # adminSidesa
-Update 1.6
-
-- CRUD UMKM
-- CRUD Berita
+Update 1.7
+- Dashboard
+- CRUD Pengumuman
   
 Info Lebih Lanjut liat di tab Pull-Requests/Closed
 
 Fitur :
-- Dashboard (Sementara)
+- Dashboard (Done)
 - CRUD penduduk (Done)
 - CRUD berita (Done)
 - CRUD keluarga (Done)
-- CRUD pengumuman
+- CRUD pengumuman (Done)
 - CRUD event (Done)
 - CRUD Galeri (Done)
 - CRUD UMKM (Done)
