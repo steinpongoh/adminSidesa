@@ -7,7 +7,7 @@ $getId = $_GET['id'];
 $queryEvent = query("SELECT * FROM `event` WHERE id='$getId'")[0];
 
 if (isset($_POST['submit'])) {
-    if (ubahEvent($_POST) > 0) {
+    if (ubahEvent($_POST,$_FILES) > 0) {
         echo "
             <script>
             alert('Data Berhasil Diubah');
@@ -44,6 +44,7 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="card-body">
                     <form name="form" id="form" action="#" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="oldFile" id="oldFile" value="<?=$queryEvent['gambar']?>">
                         <input type="hidden" name="id" id="id" value="<?= $queryEvent['id'] ?>">
                         <div class="form-group">
                             <label for="judul_acara">Judul Acara</label>
@@ -60,6 +61,10 @@ if (isset($_POST['submit'])) {
                         <div class="form-group">
                             <label for="tanggal_acara">Tanggal Acara</label>
                             <input name="tanggal_acara" id="tanggal_acara" value="<?= $queryEvent['tanggal_acara'] ?>" autocomplete="off" type="date" class="form-control" placeholder="..." required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="namaFile" class="form-label">Foto</label>
+                            <input id="namaFile" name="namaFile" class="form-control" type="file">
                         </div>
                         <button name="submit" id="submit" type="submit" class="btn btn-primary">Submit</button>
                     </form>

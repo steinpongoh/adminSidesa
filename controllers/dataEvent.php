@@ -40,6 +40,7 @@ $queryPengaduan = query('SELECT * FROM `event`');
                                     <th>Detail Acara</th>
                                     <th>Lokasi</th>
                                     <th>Tanggal Acara</th>
+                                    <th>Foto</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -50,6 +51,7 @@ $queryPengaduan = query('SELECT * FROM `event`');
                                     <th>Detail Acara</th>
                                     <th>Lokasi</th>
                                     <th>Tanggal Acara</th>
+                                    <th>Foto</th>
                                     <th></th>
                                 </tr>
                             </tfoot>
@@ -62,6 +64,9 @@ $queryPengaduan = query('SELECT * FROM `event`');
                                         <td style="color:grey;"><?php echo substr($rows['detail_acara'], 0, 15)?>.....</td>
                                         <td><?php echo $rows['lokasi'] ?></td>
                                         <td><?php echo $rows['tanggal_acara'] ?></td>
+                                        <td>
+                                            <img width="60px" height="60px" src="/sidesa/img/event/<?php echo $rows['gambar']?>" alt="">
+                                        </td>
                                         <td class="flex-row pr-2 align-items-center justify-content-center" style="display: flex;">
                                             <a href="../models/hapusEvent.php?id=<?= $rows['id']; ?>">
                                                 <button type="button" class="btn btn-danger">
