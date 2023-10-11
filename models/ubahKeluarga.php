@@ -53,10 +53,6 @@ if(isset($_POST['submit'])){
                             <label for="kepala_keluarga">Nama Kepala Keluarga</label>
                             <input value="<?= $queryKeluarga['nama_kepala_keluarga'] ?>" name="kepala_keluarga" id="kepala_keluarga" autocomplete="off" type="text" class="form-control" placeholder="..." required>
                         </div>
-                        <div class="form-group">
-                            <label for="jumlah_anggota">Jumlah Anggota Keluarga</label>
-                            <input value="<?= $queryKeluarga['jumlah_anggota_keluarga'] ?>" name="jumlah_anggota" id="jumlah_anggota" autocomplete="off" type="number" class="form-control" placeholder="..." required>
-                        </div>
                         <button name="submit" id="submit" type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>

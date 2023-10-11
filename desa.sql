@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 11, 2023 at 03:58 PM
+-- Generation Time: Oct 11, 2023 at 04:52 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -114,20 +114,18 @@ INSERT INTO `galeri` (`id`, `caption`, `gambar`, `tanggal_upload`) VALUES
 CREATE TABLE `keluarga` (
   `id` int(11) NOT NULL,
   `no_kk` varchar(255) NOT NULL,
-  `nama_kepala_keluarga` varchar(255) NOT NULL,
-  `jumlah_anggota_keluarga` varchar(255) NOT NULL
+  `nama_kepala_keluarga` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `keluarga`
 --
 
-INSERT INTO `keluarga` (`id`, `no_kk`, `nama_kepala_keluarga`, `jumlah_anggota_keluarga`) VALUES
-(1, '12341234', 'Stein Pongoh', '4'),
-(2, '22445562', 'Naruto', '5'),
-(3, '32351351', 'Sasuke', '6'),
-(4, '2351351', 'Kirito', '3'),
-(5, '2341234', 'Klein', '1');
+INSERT INTO `keluarga` (`id`, `no_kk`, `nama_kepala_keluarga`) VALUES
+(1, '12341234', 'Stein Pongoh'),
+(3, '32351351', 'Sasuke'),
+(5, '2341234', 'Klein'),
+(7, '169481732846', 'Heru');
 
 -- --------------------------------------------------------
 
@@ -152,7 +150,6 @@ CREATE TABLE `penduduk` (
 --
 
 INSERT INTO `penduduk` (`id`, `no_kk`, `nik`, `nama`, `tanggal_lahir`, `jenis_kelamin`, `agama`, `pekerjaan`, `alamat_lengkap`) VALUES
-(2, 2, '24235125123', 'Stein Pongoh', '2033-10-19', 'Pria', 'Kristen', 'Usaha mencari lowongan', 'Tondangow'),
 (3, 1, '596896879687', 'naruto', '2023-10-12', 'Pria', 'Kristen', 'hokage', 'konoha'),
 (6, 3, '613516', 'Sakura', '2023-10-09', 'Wanita', 'Kristen', 'beban', 'Konoha');
 
@@ -344,7 +341,7 @@ ALTER TABLE `galeri`
 -- AUTO_INCREMENT for table `keluarga`
 --
 ALTER TABLE `keluarga`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `penduduk`
