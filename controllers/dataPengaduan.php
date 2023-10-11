@@ -32,6 +32,7 @@ $queryPengaduan = query('SELECT * FROM pengaduan');
                                     <th>No</th>
                                     <th>Nama Pengadu</th>
                                     <th>Alamat Lengkap</th>
+                                    <th>Email</th>
                                     <th>Judul Pengaduan</th>
                                     <th>Detail Pengaduan</th>
                                     <th>Tanggal Pengaduan</th>
@@ -45,6 +46,7 @@ $queryPengaduan = query('SELECT * FROM pengaduan');
                                     <th>No</th>
                                     <th>Nama Pengadu</th>
                                     <th>Alamat Lengkap</th>
+                                    <th>Email</th>
                                     <th>Judul Pengaduan</th>
                                     <th>Detail Pengaduan</th>
                                     <th>Tanggal Pengaduan</th>
@@ -60,6 +62,7 @@ $queryPengaduan = query('SELECT * FROM pengaduan');
                                         <td><?= $i ?></td>
                                         <td><?php echo $rows['nama_pengadu'] ?></td>
                                         <td><?php echo $rows['alamat_lengkap'] ?></td>
+                                        <td><?php echo $rows['email'] ?></td>
                                         <td><?php echo $rows['judul_pengaduan'] ?></td>
                                         <td style="color:grey;"><?php echo substr($rows['detail_pengaduan'],0,15) ?>......</td>
                                         <td><?php echo date('d M Y H:i', strtotime($rows['tanggal_pengaduan']))?></td>
@@ -74,6 +77,11 @@ $queryPengaduan = query('SELECT * FROM pengaduan');
                                                 </button>
                                             </a>
                                             <a href="../models/ubahPengaduan.php?id=<?= $rows['id'] ?>">
+                                                <button type="button" class="btn btn-warning ml-2">
+                                                    <div class="sb-nav-link-icon mr-0 ml-0 mb-0 mt-0"><i class="fa-solid fa-pen"></i></div>
+                                                </button>
+                                            </a>
+                                            <a href="../templates/notifikasi.php?id=<?= $rows['id'] ?>">
                                                 <button type="button" class="btn btn-warning ml-2">
                                                     <div class="sb-nav-link-icon mr-0 ml-0 mb-0 mt-0"><i class="fa-solid fa-pen"></i></div>
                                                 </button>
