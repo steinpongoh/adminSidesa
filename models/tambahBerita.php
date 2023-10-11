@@ -1,6 +1,6 @@
 <?php
 require '../functions/berita.php';
-include '../templates/header.php';
+// include '../templates/header.php';
 
 $pageName = 'Tambah Berita';
 if (isset($_POST['submit'])) {
