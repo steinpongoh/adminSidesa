@@ -69,7 +69,7 @@ $queryPenduduk = query("SELECT penduduk.id,keluarga.no_kk,nik,nama,tanggal_lahir
                                         <td><?php echo $rows["no_kk"] ?></td>
                                         <td><?php echo $rows["nama"] ?></td>
                                         <td><?php echo $rows["agama"] ?></td>
-                                        <td><?php echo $rows["tanggal_lahir"] ?></td>
+                                        <td><?php echo date('d M Y',strtotime($rows["tanggal_lahir"])) ?></td>
                                         <td><?php echo $rows["jenis_kelamin"] ?></td>
                                         <td><?php echo $rows["pekerjaan"] ?></td>
                                         <td><?php echo $rows["alamat_lengkap"] ?></td>

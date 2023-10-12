@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2023 at 09:02 PM
+-- Generation Time: Oct 11, 2023 at 04:52 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -43,10 +43,17 @@ CREATE TABLE `berita` (
   `id` int(11) NOT NULL,
   `judul_berita` varchar(255) NOT NULL,
   `tanggal_berita` date NOT NULL,
-  `tanggal_upload` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `detail_berita` text NOT NULL,
   `gambar` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `berita`
+--
+
+INSERT INTO `berita` (`id`, `judul_berita`, `tanggal_berita`, `detail_berita`, `gambar`) VALUES
+(3, 'Bakalae', '2023-10-11', 'adoh pala dtng lia dlu kmri ksiang dimuka balai, so ba tempur drng ini, so sirang dng aer mr dng aer joh tako mo se pisah, telpon jo sana polisi pala', 'dff94199afafbae08e92a51261c6f4bf.jpeg'),
+(4, 'ald;sjf;hajkdshfalsjdfkahjsdf', '2023-10-11', 'orjlqdhlkja dhsfk ahdkfj ahdskfhl akjdshfkjadshfkjadslhkfadfs', '193735.png');
 
 -- --------------------------------------------------------
 
@@ -60,8 +67,15 @@ CREATE TABLE `event` (
   `detail_acara` text NOT NULL,
   `lokasi` varchar(255) NOT NULL,
   `tanggal_acara` date NOT NULL,
-  `tanggal_upload` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `gambar` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `event`
+--
+
+INSERT INTO `event` (`id`, `judul_acara`, `detail_acara`, `lokasi`, `tanggal_acara`, `gambar`) VALUES
+(5, 'Pala pe kaweng ', 'marjo pala dba undang 1 lingkungan dtang makang makang', 'tondangow, kompleks kapling', '2023-10-11', 'Acer_Wallpaper_02_5000x2813.jpg');
 
 -- --------------------------------------------------------
 
@@ -71,9 +85,25 @@ CREATE TABLE `event` (
 
 CREATE TABLE `galeri` (
   `id` int(11) NOT NULL,
+  `caption` varchar(255) NOT NULL,
   `gambar` varchar(255) NOT NULL,
   `tanggal_upload` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `galeri`
+--
+
+INSERT INTO `galeri` (`id`, `caption`, `gambar`, `tanggal_upload`) VALUES
+(4, 'adfadsfadsf', '46494.jpg', '2023-10-10 06:00:00'),
+(5, 'asfasdasdfsadfdsafds', 'Acer_Wallpaper_01_5000x2814.jpg', '2023-10-10 06:01:00'),
+(6, 'fasdfsadfadsfsdaf', 'Acer_Wallpaper_02_5000x2813.jpg', '2023-10-10 06:01:00'),
+(7, 'adsfasdfdsaf', 'Acer_Wallpaper_02_5000x2813.jpg', '2023-10-10 06:03:00'),
+(8, 'asdfadsf', 'Acer_Wallpaper_01_5000x2814.jpg', '2023-10-10 06:22:00'),
+(9, 'asdfadsf', 'Acer_Wallpaper_01_5000x2814.jpg', '2023-10-10 06:22:00'),
+(10, 'adsfadsf', 'Acer_Wallpaper_02_5000x2813.jpg', '2023-10-10 06:27:00'),
+(11, 'adsfasdfadsf', '46494.jpg', '2023-10-10 06:38:00'),
+(12, 'ddfadsfasdf', 'Screenshot 2023-05-03 134835.png', '2023-10-10 07:41:00');
 
 -- --------------------------------------------------------
 
@@ -84,18 +114,18 @@ CREATE TABLE `galeri` (
 CREATE TABLE `keluarga` (
   `id` int(11) NOT NULL,
   `no_kk` varchar(255) NOT NULL,
-  `nama_kepala_keluarga` varchar(255) NOT NULL,
-  `jumlah_anggota_keluarga` varchar(255) NOT NULL
+  `nama_kepala_keluarga` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `keluarga`
 --
 
-INSERT INTO `keluarga` (`id`, `no_kk`, `nama_kepala_keluarga`, `jumlah_anggota_keluarga`) VALUES
-(1, '12341234', 'Stein Pongoh', '4'),
-(2, '22445562', 'Naruto', '5'),
-(3, '32351351', 'Sasuke', '6');
+INSERT INTO `keluarga` (`id`, `no_kk`, `nama_kepala_keluarga`) VALUES
+(1, '12341234', 'Stein Pongoh'),
+(3, '32351351', 'Sasuke'),
+(5, '2341234', 'Klein'),
+(7, '169481732846', 'Heru');
 
 -- --------------------------------------------------------
 
@@ -120,10 +150,8 @@ CREATE TABLE `penduduk` (
 --
 
 INSERT INTO `penduduk` (`id`, `no_kk`, `nik`, `nama`, `tanggal_lahir`, `jenis_kelamin`, `agama`, `pekerjaan`, `alamat_lengkap`) VALUES
-(2, 1, '24235125123', 'Stein Pongoh', '2033-10-19', 'Pria', 'Kristen', 'Usaha mencari lowongan ', 'Tondangow'),
 (3, 1, '596896879687', 'naruto', '2023-10-12', 'Pria', 'Kristen', 'hokage', 'konoha'),
-(4, 2, '12341234', 'asdfasdf', '2023-10-18', 'Wanita', 'adfasdf', 'adsfadsf', 'adsfadsf'),
-(5, 3, '3242341', 'Sakura ', '2023-10-10', 'Wanita', 'Kristen', 'beban', 'Konoha');
+(6, 3, '613516', 'Sakura', '2023-10-09', 'Wanita', 'Kristen', 'beban', 'Konoha');
 
 -- --------------------------------------------------------
 
@@ -137,10 +165,17 @@ CREATE TABLE `pengaduan` (
   `alamat_lengkap` varchar(255) NOT NULL,
   `judul_pengaduan` varchar(255) NOT NULL,
   `detail_pengaduan` text NOT NULL,
-  `tanggal_pengaduan` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `tanggal_pengaduan` datetime NOT NULL,
   `no_telepon` varchar(255) NOT NULL,
   `gambar` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pengaduan`
+--
+
+INSERT INTO `pengaduan` (`id`, `nama_pengadu`, `alamat_lengkap`, `judul_pengaduan`, `detail_pengaduan`, `tanggal_pengaduan`, `no_telepon`, `gambar`) VALUES
+(8, 'stein pongoh', 'komplek kapling', 'adsfadsfdsf', 'adoh pala tu aer, so 2 bulan ini nd ada', '2023-10-09 12:38:00', '089276481264', '46494.jpg');
 
 -- --------------------------------------------------------
 
@@ -152,8 +187,16 @@ CREATE TABLE `pengumuman` (
   `id` int(11) NOT NULL,
   `judul_pengumuman` varchar(255) NOT NULL,
   `detail_pengumuman` text NOT NULL,
-  `tanggal_upload` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `tanggal_pengumuman` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pengumuman`
+--
+
+INSERT INTO `pengumuman` (`id`, `judul_pengumuman`, `detail_pengumuman`, `tanggal_pengumuman`) VALUES
+(3, 'sosialisasi', 'akls;dfjalksvklnvalnv', '2023-10-20 05:13:00'),
+(4, 'dsafgjhgfhdgfsadsA', 'ADFSGHFDGFSDASadfsgfhgjkhfdgfsadsDSFGHJDGFSDASADSFGDHFGJDFSDASDFGDHFJGHJFDGFSDAS', '2023-10-11 21:41:00');
 
 -- --------------------------------------------------------
 
@@ -162,12 +205,19 @@ CREATE TABLE `pengumuman` (
 --
 
 CREATE TABLE `penjual` (
-  `id` int(11) NOT NULL,
-  `nik` varchar(255) NOT NULL,
-  `nama_penjual` varchar(255) NOT NULL,
+  `id_penjual` int(11) NOT NULL,
+  `nama_penjual` int(20) NOT NULL,
   `no_telepon` varchar(255) NOT NULL,
-  `alamat` varchar(255) NOT NULL
+  `alamat_toko` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `penjual`
+--
+
+INSERT INTO `penjual` (`id_penjual`, `nama_penjual`, `no_telepon`, `alamat_toko`) VALUES
+(3, 6, '089812634', 'Di kompleks danau'),
+(5, 3, '0816347', 'kompleks gunung');
 
 -- --------------------------------------------------------
 
@@ -176,12 +226,21 @@ CREATE TABLE `penjual` (
 --
 
 CREATE TABLE `produk` (
-  `id` int(11) NOT NULL,
+  `id_produk` int(11) NOT NULL,
   `id_penjual` int(11) NOT NULL,
   `nama_produk` varchar(255) NOT NULL,
-  `harga` decimal(10,0) NOT NULL,
+  `harga` varchar(255) NOT NULL,
   `gambar` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `produk`
+--
+
+INSERT INTO `produk` (`id_produk`, `id_penjual`, `nama_produk`, `harga`, `gambar`) VALUES
+(3, 3, 'Gado Gado', '20,000', 'Screenshot 2023-09-07 115824.png'),
+(4, 5, 'Ramen', '20,000', 'Screenshot 2023-09-19 154759.png'),
+(6, 5, 'Sayor Nangka', '15,000', 'Acer_Wallpaper_02_5000x2813.jpg');
 
 --
 -- Indexes for dumped tables
@@ -240,13 +299,14 @@ ALTER TABLE `pengumuman`
 -- Indexes for table `penjual`
 --
 ALTER TABLE `penjual`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id_penjual`),
+  ADD KEY `nama_penjual` (`nama_penjual`);
 
 --
 -- Indexes for table `produk`
 --
 ALTER TABLE `produk`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`id_produk`),
   ADD KEY `id_penjual` (`id_penjual`);
 
 --
@@ -263,55 +323,55 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `berita`
 --
 ALTER TABLE `berita`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `galeri`
 --
 ALTER TABLE `galeri`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `keluarga`
 --
 ALTER TABLE `keluarga`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `penduduk`
 --
 ALTER TABLE `penduduk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `pengaduan`
 --
 ALTER TABLE `pengaduan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `pengumuman`
 --
 ALTER TABLE `pengumuman`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `penjual`
 --
 ALTER TABLE `penjual`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_penjual` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
@@ -324,10 +384,16 @@ ALTER TABLE `penduduk`
   ADD CONSTRAINT `penduduk_ibfk_1` FOREIGN KEY (`no_kk`) REFERENCES `keluarga` (`id`);
 
 --
+-- Constraints for table `penjual`
+--
+ALTER TABLE `penjual`
+  ADD CONSTRAINT `penjual_ibfk_1` FOREIGN KEY (`nama_penjual`) REFERENCES `penduduk` (`id`);
+
+--
 -- Constraints for table `produk`
 --
 ALTER TABLE `produk`
-  ADD CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`id_penjual`) REFERENCES `penjual` (`id`);
+  ADD CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`id_penjual`) REFERENCES `penjual` (`id_penjual`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

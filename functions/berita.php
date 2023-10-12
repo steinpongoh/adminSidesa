@@ -3,7 +3,7 @@
 
     function tambahBerita($data, $file){
         global $dbconnect;
-        $direktori="../../sidesa/img/berita/";
+        $direktori="../../sidesa/img/galeri/";
         $judul_berita=$data['judul_berita'];
         $tanggal_berita=$data['tanggal_berita'];
         $detail_berita=$data['detail_berita'];
@@ -19,7 +19,7 @@
         global $dbconnect;
         $id=$data['id'];
         $oldFile=$data['oldFile'];
-        $direktori="../../sidesa/img/berita/";
+        $direktori="../../sidesa/img/galeri/";
         $judul_berita=$data['judul_berita'];
         $tanggal_berita=$data['tanggal_berita'];
         $detail_berita=$data['detail_berita'];

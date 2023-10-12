@@ -1,9 +1,9 @@
 <?php
-require '../functions/galeri.php';
+require '../functions/pengaduan.php';
 include '../templates/header.php';
 
-$pageName = 'Data Galeri';
-$queryGaleri = query('SELECT * FROM galeri');
+$pageName = 'Data Pengumuman';
+$queryPengumuman = query('SELECT * FROM pengumuman');
 
 ?>
 
@@ -23,51 +23,49 @@ $queryGaleri = query('SELECT * FROM galeri');
                         <i class="fas fa-table mr-1 position-relative"></i>
                         <?= $pageName ?>
                     </div>
-                    <a href="../models/tambahGaleri.php">
-                    <button type="button" class="btn btn-success">
-                        <div class="sb-nav-link-icon"><i class="fa-solid fa-square-plus mr-2"></i>Tambah</div>
-                    </button>
-                </a>
+                    <a href="../models/tambahPengumuman.php">
+                        <button type="button" class="btn btn-success">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-square-plus mr-2"></i>Tambah</div>
+                        </button>
+                    </a>
                 </div>
-                
+
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Caption</th>
-                                    <th>Gambar</th>
-                                    <th>Tanggal Upload</th>
+                                    <th>Judul Pengumuman</th>
+                                    <th>Detail Pengumuman</th>
+                                    <th>Tanggal Pengumuman</th>
                                     <th></th>
                                 </tr>
                             </thead>
                             <tfoot>
-                            <tr>
+                                <<tr>
                                     <th>No</th>
-                                    <th>Caption</th>
-                                    <th>Gambar</th>
-                                    <th>Tanggal Upload</th>
+                                    <th>Judul Pengumuman</th>
+                                    <th>Detail Pengumuman</th>
+                                    <th>Tanggal Pengumuman</th>
                                     <th></th>
                                 </tr>
                             </tfoot>
                             <tbody>
                                 <?php $i = 1 ?>
-                                <?php foreach ($queryGaleri as $rows) { ?>
+                                <?php foreach ($queryPengumuman as $rows) { ?>
                                     <tr>
                                         <td><?= $i ?></td>
-                                        <td><?php echo $rows['caption']?></td>
-                                        <td>
-                                            <img width="60px" height="60px" src="/sidesa/img/galeri/<?php echo $rows['gambar']?>" alt="">
-                                        </td>
-                                        <td><?php echo date('d M Y H:i', strtotime($rows['tanggal_upload']))?></td>
+                                        <td><?php echo $rows['judul_pengumuman'] ?></td>
+                                        <td><?php echo $rows['detail_pengumuman'] ?></td>
+                                        <td><?php echo date('d M Y H:i', strtotime($rows['tanggal_pengumuman']))?></td>
                                         <td class="flex-row pr-2 align-items-center justify-content-center" style="display: flex;">
-                                            <a href="../models/hapusGaleri.php?id=<?= $rows['id']; ?>">
+                                            <a href="../models/hapusPengumuman.php?id=<?= $rows['id']; ?>">
                                                 <button type="button" class="btn btn-danger">
                                                     <div class="sb-nav-link-icon mr-1 ml-1 mb-0 mt-0"><i class="fa-solid fa-trash"></i></div>
                                                 </button>
                                             </a>
-                                            <a href="../models/ubahGaleri.php?id=<?= $rows['id'] ?>">
+                                            <a href="../models/ubahPengumuman.php?id=<?= $rows['id'] ?>">
                                                 <button type="button" class="btn btn-warning ml-2">
                                                     <div class="sb-nav-link-icon mr-0 ml-0 mb-0 mt-0"><i class="fa-solid fa-pen"></i></div>
                                                 </button>

@@ -57,7 +57,7 @@ $queryKeluarga = query("SELECT * FROM keluarga");
                                         <td><?= $i ?></td>
                                         <td><?php echo $rows['no_kk'] ?></td>
                                         <td><?php echo $rows['nama_kepala_keluarga'] ?></td>
-                                        <td><?php echo $rows['jumlah_anggota_keluarga'] ?></td>
+                                        <td><?php echo count(query("SELECT * FROM penduduk INNER JOIN keluarga ON penduduk.no_kk = keluarga.id WHERE penduduk.no_kk='$rows[id]'")) ?></td>
                                         <td class="flex-row pr-2 align-items-center justify-content-center" style="display: flex;">
                                             <a href="../models/hapusKeluarga.php?id=<?= $rows['id'];?>">
                                                 <button type="button" class="btn btn-danger">
