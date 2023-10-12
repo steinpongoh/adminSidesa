@@ -37,7 +37,6 @@ $queryBerita = query('SELECT * FROM berita');
                                     <th>No</th>
                                     <th>Judul Berita</th>
                                     <th>Tanggal Berita</th>
-                                    <th>Tanggal Upload</th>
                                     <th>Detail Berita</th>
                                     <th>Gambar</th>
                                     <th></th>
@@ -48,7 +47,6 @@ $queryBerita = query('SELECT * FROM berita');
                                     <th>No</th>
                                     <th>Judul Berita</th>
                                     <th>Tanggal Berita</th>
-                                    <th>Tanggal Upload</th>
                                     <th>Detail Berita</th>
                                     <th>Gambar</th>
                                     <th></th>
@@ -61,7 +59,6 @@ $queryBerita = query('SELECT * FROM berita');
                                         <td><?= $i ?></td>
                                         <td><?php echo $rows['judul_berita'] ?></td>
                                         <td><?php echo $rows['tanggal_berita'] ?></td>
-                                        <td><?php echo $rows['tanggal_upload'] ?></td>
                                         <td style="color:grey;"><?php echo substr($rows['detail_berita'],0,15) ?></td>
                                         <td>
                                             <img width="60px" height="60px" src="/sidesa/img/berita/<?php echo $rows['gambar']?>" alt="">

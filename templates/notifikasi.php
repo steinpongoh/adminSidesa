@@ -21,7 +21,6 @@ $mail -> From       ='ulllrauulll@gmail.com';
 $mail -> FromName   ='Rauulll ULLL';
 $mail -> addAddress($user['email']);
 $mail -> Subject    ='Balasan Pengaduan Admin Desa Tondangow';
-$mail->addAttachment=($user['gambar']);
 $mail -> Body       ='<p>Terima Kasih telah menggunakan Website ini. Kami telah menerima Pengaduan anda, dan segera akan kami proses sesuai dengan prosedur yang ada dan akan ditindak lanjuti oleh pemerintah setempat. <p> 
 Judul Pengaduan:'. $user['judul_pengaduan']. '<p>'.
 'Detail:'. $user['detail_pengaduan']. '<p>'.
