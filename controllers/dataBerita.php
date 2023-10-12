@@ -57,7 +57,7 @@ $queryBerita = query('SELECT * FROM berita');
                                 <?php foreach ($queryBerita as $rows) { ?>
                                     <tr>
                                         <td><?= $i ?></td>
-                                        <td><?php echo $rows['judul_berita'] ?></td>
+                                        <td><?php echo $rows['judul_berita'] ?></td>                      
                                         <td><?php echo date('d M Y', strtotime($rows['tanggal_berita']))?></td>
                                         <td style="color:grey;"><?php echo substr($rows['detail_berita'],0,15) ?></td>
                                         <td>
