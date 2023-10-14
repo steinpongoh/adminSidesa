@@ -99,7 +99,17 @@ $pageName = 'Dashboard';
                         <div class="small text-light"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
-            </div
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-light text-dark mb-4 shadow-sm">
+                    <div class="card-body pb-0 text-center">User :</div>
+                    <div class="card-body font-weight-bolder text-center pt-0 pb-1" style="font-size: 25px;"><?php totalData('user') ?></div>
+                    <div class="card-footer d-flex align-items-center justify-content-between bg-info">
+                        <a class="small text-light stretched-link" href="/adminSidesa/controllers/dataUser.php">View Details</a>
+                        <div class="small text-light"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
         </div>
         <footer class="py-4 bg-light mt-auto">
             <div class="container-fluid">

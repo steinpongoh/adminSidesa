@@ -100,6 +100,10 @@ if($role !=='1'){
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-calendar-days"></i></div>
                             Data Event
                         </a>
+                        <a class="nav-link" href="/adminSidesa/controllers/dataUser.php">
+                            <div class="sb-nav-link-icon"><i class="fas fa-user fa-fw"></i></div>
+                            Data User
+                        </a>
                     </div>
                 </div>
             </nav>
