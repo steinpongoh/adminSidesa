@@ -65,6 +65,10 @@ if (isset($_POST['submit'])) {
                             <label for="namaFile" class="form-label">Foto</label>
                             <input id="namaFile" name="namaFile" class="form-control" type="file">
                         </div>
+                        <div class="form-group">
+                            <label for="detail_produk">Detail Produk</label>
+                            <textarea cols="4" rows="4" form="form" name="detail_produk" id="detail_produk" autocomplete="off" type="text" class="form-control" placeholder="Tambahkan detail..." required></textarea>
+                        </div>
                         <button name="submit" id="submit" type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>

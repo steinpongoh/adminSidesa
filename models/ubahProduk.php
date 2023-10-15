@@ -1,7 +1,7 @@
 <?php
 require '../functions/umkm.php';
 include '../templates/header.php';
-$pageName = 'Tambah Produk';
+$pageName = 'Ubah Produk';
 
 $getId=$_GET['id'];
 $queryProduk = query("SELECT DISTINCT
@@ -15,7 +15,8 @@ produk.id_produk,
 produk.id_penjual,
 produk.nama_produk,
 produk.harga,
-produk.gambar 
+produk.gambar,
+produk.deskripsi 
 
 FROM produk 
 JOIN penjual ON produk.id_penjual=penjual.id_penjual
@@ -23,14 +24,15 @@ JOIN penduduk ON penjual.nama_penjual=penduduk.id WHERE produk.id_produk='$getId
 
 
 if (isset($_POST['submit'])) {
-    if (ubahProduk($_POST,$_FILES) > 0) {
+    
+    if (ubahProduk($_POST,$_FILES)) {
         echo "<script>
-            alert('Data Berhasil Diubah')
+            alert('Data Gagal Diubah')
             document.location.href='../controllers/dataProduk.php'
         </script>";
     } else {
         echo "<script>
-            alert('Data Berhasil Diubah')
+            alert('Data Berhail Diubah')
             document.location.href='../controllers/dataProduk.php'
         </script>";
     }
@@ -57,8 +59,8 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="card-body">
                     <form name="form" id="form" action="#" method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="id" id="id" class="id">
-                        <input type="hidden" name="oldFIle" id="oldFile" class="oldFile">
+                        <input value="<?=$queryProduk['id_produk']?>" type="hidden" name="id" id="id" class="id">
+                        <input value="<?=$queryProduk['gambar']?>" type="hidden" name="oldFile" id="oldFile" class="oldFile">
                         <div class="form-group">
                             <label for="nama_penjual">Nama Penjual</label>
                             <select name="nama_penjual" id="selectize" class="form-select" required>
@@ -80,11 +82,15 @@ if (isset($_POST['submit'])) {
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Rp</span>
                             </div>
-                            <input value="<?=$queryProduk['harga']?>" id="harga" name="harga" type="text" class="form-control harga" aria-label="Amount (to the nearest dollar)">
+                            <input value="<?=$queryProduk['harga']?>" id="harga" name="harga" type="text" class="form-control harga" aria-label="Amount (to the nearest dollar)" autocomplete="off">
                         </div>
                         <div class="mb-3">
                             <label for="namaFile" class="form-label">Foto</label>
                             <input id="namaFile" name="namaFile" class="form-control" type="file">
+                        </div>
+                        <div class="form-group">
+                            <label for="detail_produk">Detail Produk</label>
+                            <textarea cols="4" rows="4" form="form" name="detail_produk" id="detail_produk" autocomplete="off" type="text" class="form-control" placeholder="Tambahkan detail..." required><?=$queryProduk['deskripsi']?></textarea>
                         </div>
                         <button name="submit" id="submit" type="submit" class="btn btn-primary">Submit</button>
                     </form>

@@ -76,14 +76,9 @@ $queryPengaduan = query('SELECT * FROM pengaduan');
                                                     <div class="sb-nav-link-icon mr-1 ml-1 mb-0 mt-0"><i class="fa-solid fa-trash"></i></div>
                                                 </button>
                                             </a>
-                                            <a href="../models/ubahPengaduan.php?id=<?= $rows['id'] ?>">
-                                                <button type="button" class="btn btn-warning ml-2">
-                                                    <div class="sb-nav-link-icon mr-0 ml-0 mb-0 mt-0"><i class="fa-solid fa-pen"></i></div>
-                                                </button>
-                                            </a>
                                             <a href="../templates/notifikasi.php?id=<?= $rows['id'] ?>">
-                                                <button type="button" class="btn btn-warning ml-2">
-                                                    <div class="sb-nav-link-icon mr-0 ml-0 mb-0 mt-0"><i class="fa-solid fa-pen"></i></div>
+                                                <button type="button" class="btn btn-success ml-2">
+                                                    <div class="sb-nav-link-icon mr-0 ml-0 mb-0 mt-0"><i class="fa-solid fa-envelope"></i></div>
                                                 </button>
                                             </a>
                                         </td>

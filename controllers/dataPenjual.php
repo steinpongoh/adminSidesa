@@ -41,6 +41,7 @@ $queryPenjual=query('SELECT * FROM penjual INNER JOIN penduduk ON penjual.nama_p
                                     <th>Nama</th>
                                     <th>Nomor Telepon</th>
                                     <th>Alamat</th>
+                                    <th>Link Alamat</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -51,6 +52,7 @@ $queryPenjual=query('SELECT * FROM penjual INNER JOIN penduduk ON penjual.nama_p
                                     <th>Nama</th>
                                     <th>Nomor Telepon</th>
                                     <th>Alamat</th>
+                                    <th>Link Alamat</th>
                                     <th></th>
                                 </tr>
                             </tfoot>
@@ -62,7 +64,8 @@ $queryPenjual=query('SELECT * FROM penjual INNER JOIN penduduk ON penjual.nama_p
                                         <td><?php echo $rows["nik"] ?></td>
                                         <td><?php echo $rows["nama"] ?></td>
                                         <td><?php echo $rows["no_telepon"] ?></td>
-                                        <td><?php echo $rows["alamat_toko"] ?></td>
+                                        <td class="text-muted"><?php echo substr($rows["alamat_toko"],0,20) ?>...</td>
+                                        <td><?php echo $rows["link_alamat_toko"]?></td>
                                         <td class="flex-row pr-2" style="display: flex;">
                                             <a href="../models/hapusPenjual.php?id=<?= $rows['id_penjual']; ?>">
                                                 <button type="button" class="btn btn-danger">
