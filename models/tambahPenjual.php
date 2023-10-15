@@ -56,7 +56,11 @@ if (isset($_POST['submit'])) {
                         </div>
                         <div class="form-group">
                             <label for="alamat_toko">Alamat Toko</label>
-                            <input name="alamat_toko" id="lokasi" autocomplete="off" type="text" class="form-control" placeholder="..." required>
+                            <input name="alamat_toko" id="alamat_toko" autocomplete="off" type="text" class="form-control" placeholder="..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="link_alamat_toko">Link Alamat Toko</label>
+                            <input name="link_alamat_toko" id="link_alamat_toko" autocomplete="off" type="text" class="form-control" placeholder="..." required>
                         </div>
                         <button name="submit" id="submit" type="submit" class="btn btn-primary">Submit</button>
                     </form>
