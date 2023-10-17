@@ -1,12 +1,7 @@
 <?php
 session_start();
-$usernamed = $_SESSION['username'];
-$role = $_SESSION['role'];
-if(empty($usernamed) && ($role =='')){
-  header("location:login.php");
-}
-if($role !=='1'){
-  header("location:login.php");
+if(empty($_SESSION['username'])){
+  header("location:templates/login.php");
 }
 
 ?>
