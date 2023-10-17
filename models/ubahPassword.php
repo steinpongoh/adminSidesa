@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
                         <input type="hidden" name="id" id="id" value="<?= $queryUser['id'] ?>">
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input value="<?= $queryUser['password'] ?>" name="password" id="password" autocomplete="off" type="text" class="form-control" placeholder="Masukkan nama..." required>
+                            <input value="<?= $queryUser['password'] ?>" name="password" id="password" autocomplete="off" type="text" class="form-control" placeholder="Masukkan password..." required>
                         </div>
                         <button name="submit" id="submit" type="submit" class="btn btn-primary">Submit</button>
                     </form>

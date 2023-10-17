@@ -1,25 +1,19 @@
 <?php
-include '../templates/header.php';
 require '../functions/user.php';
+include '../templates/header.php';
 
-$pageName = 'Ubah User';
-$getId = $_GET['id'];
-$queryUser = query("SELECT * FROM user WHERE id='$getId'")[0];
-
+$pageName='Tambah User';
 if (isset($_POST['submit'])) {
-    if (ubahUsername($_POST) > 0) {
-        echo "
-            <script>
-            alert('Data Berhasil Diubah');
-            document.location.href='../controllers/dataUser.php';
-            </script> 
-        ";
+    if (tambahUser($_POST) > 0) {
+        echo "<script>
+            alert('User Berhasil Ditambah')
+            document.location.href='../controllers/dataUser.php'
+        </script>";
     } else {
-        echo "
-            <script>
-            alert('Data Gagal Diubah');
-            </script> 
-        ";
+        echo "<script>
+            alert('User Gagal Ditambah')
+            document.location.href='../models/tambahUser.php'
+        </script>";
     }
 }
 ?>
@@ -43,11 +37,14 @@ if (isset($_POST['submit'])) {
                     </div>
                 </div>
                 <div class="card-body">
-                <form name="form" id="form" action="#" method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="id" id="id" value="<?= $queryUser['id'] ?>">
+                    <form name="form" id="form" action="#" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="username">Nama Lengkap</label>
-                            <input value="<?= $queryUser['username'] ?>" name="username" id="username" autocomplete="off" type="text" class="form-control" placeholder="Masukkan nama..." required>
+                            <input name="username" id="username" autocomplete="off" type="text" class="form-control" placeholder="Masukkan Nama Anda!" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input name="password" id="password" autocomplete="off" type="password" class="form-control" placeholder="Isikan Password!" required>
                         </div>
                         <button name="submit" id="submit" type="submit" class="btn btn-primary">Submit</button>
                     </form>

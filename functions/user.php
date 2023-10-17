@@ -1,16 +1,23 @@
 <?php
     include 'general.php';
     
-    function ubahUsername($data){
+    function tambahUser($data){
         global $dbconnect;
-        $id=$data['id'];
-        $username=$data['username'];
+        $username=$_POST['username'];
+        $password=md5($_POST['password']);
 
-        $query="UPDATE user SET username='$username'
-        WHERE id='$id'";
-        
-        mysqli_query($dbconnect,$query);
-        return mysqli_affected_rows($dbconnect);
+        $result = mysqli_query($dbconnect, "SELECT username FROM user WHERE username = '$username'");
+
+        if(mysqli_fetch_assoc($result)>0) {
+            echo "<script>
+                    alert ('Username sudah terdaftar!')
+                    document.location.href='../models/tambahUser.php';
+                </script>";
+        }else{
+            $query="INSERT INTO user VALUES ('','$username','$password')";
+            mysqli_query($dbconnect,$query);
+            return mysqli_affected_rows($dbconnect);
+        }
     }
 
     function ubahPassword($data){
